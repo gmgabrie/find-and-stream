@@ -1,19 +1,14 @@
-.search {
-    margin: 3rem;
-    margin-left: 12rem;
-    background-color: transparent;
-    border: 2px solid #e9e9ec;
-    border-radius: 50px;
-    color: #fff;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    }
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     
-    .search::placeholder {
-        color: #7378c5;
-        }
-        .search:focus {
-        background-color: #050505;
-        outline: none;
-        }
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+  h1 {
+    color: white;
+  }

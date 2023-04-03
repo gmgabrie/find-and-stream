@@ -1,104 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import Google Icon Font -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Find and Stream  really really great</title>
-</head>
-<body>
-    <!-- Navbar -->
-    <header>
-        <div class="row teal">
-        <h1 class=" col l12 center">Find and Stream</h1>
-    </div>
-    </header>
-    <nav class="teal">
-        <div class="nav-wrapper container">
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-      <div class="row">
-        <div class="col l3">
-            <h2>Watchlist</h2>
-            <div class="collection">
-                <a href="#!" class="collection-item">Avengers</a>
-                <a href="#!" class="collection-item active">Alvin</a>
-                <a href="#!" class="collection-item">Alvin</a>
-                <a href="#!" class="collection-item">Alvin</a>
-              </div>
-        </div>
-        <!-- Card -->
-            <div class="row">
-                <div class="col l2">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="/apiihy1mm__31528.jpg">
-                      <span class="card-title">Card Title</span>
-                      <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col l2 ">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg">
-                        <span class="card-title">Card Title</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                      </div>
-                      <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col l2">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/download.jpeg">
-                        <span class="card-title">Card Title</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                      </div>
-                      <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col l2">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/108b520c55e3c9760f77a06110d6a73b_480x.progressive.webp">
-                        <span class="card-title">Card Title</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                      </div>
-                      <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        <div class="col s1">3</div>
-      </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Import Google Icon Font -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!--Import materialize.css-->
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="css/materialize.min.css"
+			media="screen,projection"
+		/>
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
 
-      <p>This is just a test for git push</p>
-      <!-- Footer -->
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="script.js"></script>
-</body>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Find and Stream</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header class="teal">
+			<div class="row teal">
+				<h1 class="col l12 center">Find and Stream</h1>
+			</div>
+		</header>
+
+		<nav class="teal">
+			<div class="nav-wrapper container">
+				<form>
+					<div class="input-field">
+						<input id="search" type="search" required />
+						<label class="label-icon" for="search"
+							><i class="material-icons">search</i></label
+						>
+						<i class="material-icons">close</i>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		<div class="row">
+			<div class="col l3">
+				<h2>Watchlist</h2>
+				<hr />
+				<br />
+				<div class="collection">
+					<a href="#!" class="collection-item">Avengers</a>
+					<a href="#!" class="collection-item active">Avengers Age of Ultron</a>
+					<a href="#!" class="collection-item">Avengers Infinity War</a>
+					<a href="#!" class="collection-item">Avengers Endgame</a>
+				</div>
+			</div>
+			<!-- Card -->
+			<div class="row">
+				<div class="col l2">
+					<div class="card">
+						<div class="card-image">
+							<img src="/apiihy1mm__31528.jpg" />
+							<span class="card-title"></span>
+							<a class="btn-floating halfway-fab waves-effect waves-light red"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l2">
+					<div class="card">
+						<div class="card-image">
+							<img
+								src="/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg"
+							/>
+							<span class="card-title"></span>
+							<a class="btn-floating halfway-fab waves-effect waves-light red"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l2">
+					<div class="card">
+						<div class="card-image">
+							<img src="/download.jpeg" />
+							<span class="card-title"></span>
+							<a class="btn-floating halfway-fab waves-effect waves-light red"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l2">
+					<div class="card">
+						<div class="card-image">
+							<img
+								src="/108b520c55e3c9760f77a06110d6a73b_480x.progressive.webp"
+							/>
+							<span class="card-title"></span>
+							<a class="btn-floating halfway-fab waves-effect waves-light red"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
