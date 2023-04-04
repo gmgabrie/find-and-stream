@@ -16,7 +16,7 @@ function fetchStreamingInfo() {
     const searchTitle = document.getElementById('searchBtn').value;
 
     //Fetch request 
-    fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=' + searchTitle + '&country=us&show_type=movie&output_language=en', options)
+    fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=johnwick4&country=us&show_type=movie&output_language=en', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
