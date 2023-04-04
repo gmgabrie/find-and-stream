@@ -6,7 +6,7 @@ let addBtn3 = document.getElementById('watchlist-btn3');
 let addBtn4 = document.getElementById('watchlist-btn4');
 let titleName = document.getElementsByClassName('title-name');
 
-
+//Once api is implemented this function will add the title name of the movie selected to the watchlist
 function addToWatchlist() {
     
     // const watchList = document.getElementById('watchlist');
