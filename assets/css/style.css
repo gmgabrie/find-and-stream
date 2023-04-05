@@ -1,14 +1,71 @@
- body {
+
+
+   /* body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     
-  }
+  } */
 
-  main {
-    flex: 1 0 auto;
-  }
+  
       
   h1 {
     color: white;
   }
+
+  #trending-card {
+    max-width: 220px;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    max-height: 100px;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  #card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  /* #redButtonA {
+    position: relative;
+  }*/
+
+  .click-btn {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 25px;
+    margin:200px 0 0 80px;
+    text-align:justify;
+    text-decoration: none;
+    display:flex;
+    font-size: 12px;
+    position:absolute;
+    border-radius: 50%;
+    height:20px;
+    width:20px;
+  }
+
+  /*.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+  }
+  
+  .button1 {border-radius: 2px;}
+  .button2 {border-radius: 4px;}
+  .button3 {border-radius: 8px;}
+  .button4 {border-radius: 12px;}
+  .button5 {border-radius: 50%;}
+  /*
