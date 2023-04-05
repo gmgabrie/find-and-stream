@@ -23,6 +23,8 @@ function displayTrending() {
   // create header/title for "this weeks top trending movies"
   var trendingHeaderDiv = document.createElement('div');
   trendingHeaderDiv.id = 'trending-header-div';
+  var trendingHeaderClasses = ['col', 's12'];
+  trendingHeaderDiv.classList.add(...trendingHeaderClasses);
   var trendingHeader = document.createElement('h3');
   trendingHeader.innerText = "This Week's Top Trending Movies:";
   cardContainer.appendChild(trendingHeaderDiv);
