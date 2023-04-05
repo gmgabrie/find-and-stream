@@ -1,4 +1,4 @@
-//Needed for Materialize
-$(document).ready(function() {
-    M.updateTextFields();
-  });
+// //Needed for Materialize
+// $(document).ready(function() {
+//     M.updateTextFields();
+//   });
