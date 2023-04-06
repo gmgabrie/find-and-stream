@@ -1,5 +1,5 @@
 //Search API Variables
-let movieTitle = 'movie title';
+let movieTitle = '';
 let tagline = '';
 let releaseYear = '';
 let posterImg = '';
