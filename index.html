@@ -36,12 +36,12 @@
 
 		<nav class="teal">
 			<div class="nav-wrapper container">
-				<form>
+				<form id="searchForm">
 					<div class="input-field">
 						<input id="search" type="search" required />
-						<label class="label-icon" for="search"
-							><i class="material-icons">search</i></label
-						>
+						<label class="label-icon" for="search">
+							<button type="submit" id="searchBtn"><i class="material-icons">search</i></button>
+							</label>
 						<i class="material-icons">close</i>
 					</div>
 				</form>
@@ -53,11 +53,8 @@
 				<h2>Watchlist</h2>
 				<hr />
 				<br />
-				<div class="collection">
-					<a href="#!" class="collection-item">Avengers</a>
-					<a href="#!" class="collection-item active">Avengers Age of Ultron</a>
-					<a href="#!" class="collection-item">Avengers Infinity War</a>
-					<a href="#!" class="collection-item">Avengers Endgame</a>
+				<div class="collection" id="watchlist">
+				
 				</div>
 			</div>
 			<!-- Card Section-->

@@ -65,25 +65,16 @@ function displayTrending() {
   trendingCard.appendChild(displayTrendingOverview);
 
 
- 
-  //Then, we create a button
-const btn = document.createElement("button");
-//Then, we add it the same as their respective siblings
-btn.className = "click-btn";
-//Now, we add it some text
-btn.innerText = "Click Here";
-//Lastly, append it to the container
-trendingCard.appendChild(btn);
 
   // add the red circle with plus sign on each card
-  //var redButtonA = document.createElement('button');
-  //var redButtonA = document.createElement('a');
-  //var redButtonClasses = ['btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red'];
-  //redButtonA.classList.add('.redButtonClasses');
-  //redButtonA.innerHTML = '<i class="material-icons">add</i>';
-  //trendingCard.appendChild(redButtonA);
+  
+  var redButtonA = document.createElement('a');
+  var redButtonClasses = ['btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red'];
+  redButtonA.classList.add(...redButtonClasses);
+  redButtonA.innerHTML = '<i class="material-icons">add</i>';
+  trendingCard.appendChild(redButtonA);
 
-
+  
 
   }
 })
@@ -91,56 +82,18 @@ trendingCard.appendChild(btn);
 // call the display trending function on initial page load
 displayTrending();
 
-//document.querySelector('#search').addEventListener('click', fectchStreamingInfo()),
 
 
-//var searchFormEl = document.querySelector('#search');
 
+
+
+
+
+// IMPLEMENT TODAY...
 
  document.querySelector('#search').addEventListener('click', event => {
     
     console.log("Hello");
+    FetchstreamingInfo();
  });
-
-//document.getElementById('button').addEventListener('click',event => {
-  //console.log('Red Button alert')
- //});
-
- //document.getElementById('#trending-card').addEventListener('click', event => {
-  //console.log('Hi, I have  been clicked')
- //}
- 
- //)
-
- //const elements = document.querySelectorAll(".click-btn");
- 
- //Then, we loop through those elements
- //for(let i = 0; i < elements.length; i++) {
-     //We add eventListener to each element
-     //elements[i].addEventListener("click", console.log('hi'));
- //}
- //document.querySelector('.btn').addEventListener('click', showMore)
-
-
-//function SearchFilm(event) {
-//event.preventDefault();
-
-//var searchInputVal = document.querySelector('#search').value;
-//}
-
-//if (searchInputVal) {
-//console.log('Ihave beeen clicked');
-
-//}
-
-//var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
-
-//location.assign(queryString);
-
-
-//searchFormEl.addEventListener('submit', Joshua function);
-
-
-//RedButtonAEl.addEventListener('click', () => console.log('I have been clicked'));
-
 

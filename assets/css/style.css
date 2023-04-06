@@ -30,26 +30,11 @@
     text-align: center;
   }
 
-  /* #redButtonA {
+   #redButtonA {
     position: relative;
-  }*/
-
-  .click-btn {
-    background-color: red; /* Green */
-    border: none;
-    color: white;
-    padding: 25px;
-    margin:200px 0 0 80px;
-    text-align:justify;
-    text-decoration: none;
-    display:flex;
-    font-size: 12px;
-    position:absolute;
-    border-radius: 50%;
-    height:20px;
-    width:20px;
   }
 
+  
   /*.button {
     background-color: #04AA6D;
     border: none;
