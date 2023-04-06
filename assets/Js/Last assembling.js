@@ -111,7 +111,7 @@ function displayTrending() {
   displayTrending();
   
   // Event Listener for "view trending movies" button which clears data in card container and calls displayTrending function
-    trendingBtn.addEventListener("click", function clearData() {
+  trendingBtn.addEventListener("click", function clearData() {
     cardContainer.replaceChildren();
     displayTrending();
   });
@@ -121,7 +121,7 @@ function displayTrending() {
 container.addEventListener("click", function(e){
   if(e.target.nodeName === "I") {
     // save to the watch list
-    var movieTitle = e.target.parentElement.parentElement.firstChild.nextSibling.textContent;
+    var movieTitle = e.target.parentElement.parentElement.nextSibling.firstChild.textContent;
 
     var savedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
 

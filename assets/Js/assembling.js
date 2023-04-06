@@ -90,7 +90,6 @@ function displayTrending() {
 
 
 
-
 const container = document.getElementById("card-container");
 
 container.addEventListener("click", function(e){
