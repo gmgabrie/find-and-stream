@@ -11,6 +11,7 @@ let XRapidAPI_Host ='streaming-availability.p.rapidapi.com'
 var trendingApiUrl = 'https://api.themoviedb.org/3/trending/movie/week?api_key='
 var trendingApiKey = '768690ea624c6d0cff681d2edcb833a2'
 var trendingPosterUrl = 'https://www.themoviedb.org/t/p/w220_and_h330_face'
+
 // variable for main card container section
 var cardContainer = document.getElementById('card-container');
 
@@ -222,4 +223,3 @@ function fetchStreamingInfo() {
     let cast = result[0].cast;
 
 }
-
