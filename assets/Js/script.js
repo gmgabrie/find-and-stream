@@ -22,6 +22,8 @@ var trendingBtn = document.getElementById('trending-button');
 var cardContainer = document.getElementById('card-container');
 var watchlistEl = document.getElementById('watchlist');
 
+//Set variable for search term
+var searchTitle = '';
 
 // Title case function for search
 function titleCase(str) {
@@ -117,8 +119,6 @@ function displayTrending() {
     displayTrending();
   });
 
-
-  
 const container = document.getElementById("card-container");
 
 container.addEventListener("click", function(e){
@@ -170,19 +170,18 @@ watchlistEl.addEventListener("click", function(e) {
 })
 
 displayWatchlist();
-// call the display trending function on initial page load
-displayTrending();
-
 
 
 
 // TO DO TODAY  EVENT LISTENER TO FIRE  function fetchStreamingInfo()
 
  document.querySelector('#searchForm').addEventListener('submit', event => {
+
+    searchTitle = document.getElementById('search').value;
+    
     event.preventDefault();
     fetchStreamingInfo();
  });
-
    
 // JOSHUA FUNCTION
 
@@ -197,9 +196,6 @@ function fetchStreamingInfo() {
 		    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
 	    }
     };
-
-    //Add input function for search then:
-    const searchTitle = document.getElementById('search').value;
 
     //Fetch request 
     fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=' + searchTitle + '&country=us&show_type=movie&output_language=en', options)
@@ -222,4 +218,5 @@ function fetchStreamingInfo() {
     let directors = result[0].directors;
     let cast = result[0].cast;
 
+    console.log(movieTitle);
 }
