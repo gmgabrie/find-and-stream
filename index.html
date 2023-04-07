@@ -48,6 +48,25 @@
 			<div class="row">
 			<div class="col l3">
 				<br>
+				<!-- Modal Trigger -->
+				<button data-target="modal1" class="btn blue darken-3 modal-trigger">Need Help?</button>
+				<!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+											
+				<!-- Modal Structure -->
+				<div id="modal1" class="modal">
+					<div class="modal-content">
+						<h4>Find and Stream Help</h4>
+							<p>Search for a movie title in the top search bar.  Results will show movie information as well as streaming options.
+							<br><br>Click on the red button to add a title to your Watch List.
+							<br><br>View top trending movies by clicking on the "View Top Trending Movies" button.
+							</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+					</div>
+				</div>
+				<br>
+				<br>
 				<a id="trending-button" class="waves-effect waves-light btn">View Top Trending Movies</a>
 				<h2>Watchlist</h2>
 				<hr />
@@ -64,7 +83,10 @@
 		<!-- Footer -->
 
 		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src=".js/materialize.min.js"></script>
+		<!-- need jQuery for modal -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<!-- need Materialize CDN link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="./assets/Js/script.js"></script>
 	</body>
 </html>

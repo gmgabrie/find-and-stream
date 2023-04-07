@@ -218,5 +218,9 @@ function fetchStreamingInfo() {
     let directors = result[0].directors;
     let cast = result[0].cast;
 
-    console.log(movieTitle);
 }
+
+// needed for materialize modal
+$(document).ready(function(){
+  $('.modal').modal();
+});
