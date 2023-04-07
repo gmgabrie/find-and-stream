@@ -143,8 +143,10 @@ function displayWatchlist() {
   savedMovies.forEach(movie => {
     var titleEl = document.createElement('div');
     var aElement = document.createElement('a');
+    aElement.classList.add('collection-item')
     var deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
+    
     titleEl.appendChild(aElement);
     titleEl.appendChild(deleteBtn);
     titleEl.classList = 'collection-item';
@@ -171,7 +173,7 @@ watchlistEl.addEventListener("click", function(e) {
 
 displayWatchlist();
 // call the display trending function on initial page load
-displayTrending();
+// displayTrending();
 
 
 
