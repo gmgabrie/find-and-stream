@@ -170,9 +170,6 @@ watchlistEl.addEventListener("click", function(e) {
 })
 
 displayWatchlist();
-// call the display trending function on initial page load
-displayTrending();
-
 
 
 
@@ -221,5 +218,9 @@ function fetchStreamingInfo() {
     let trailer = result[0].youtubeTrailerVideoLink;
     let directors = result[0].directors;
     let cast = result[0].cast;
-
 }
+
+// needed for materialize modal
+$(document).ready(function(){
+  $('.modal').modal();
+});
