@@ -117,8 +117,6 @@ function displayTrending() {
     displayTrending();
   });
 
-
-  
 const container = document.getElementById("card-container");
 
 container.addEventListener("click", function(e){
@@ -178,11 +176,14 @@ displayTrending();
 
 // TO DO TODAY  EVENT LISTENER TO FIRE  function fetchStreamingInfo()
 
- document.querySelector('#searchForm').addEventListener('submit', event => {
+ document.querySelector('#search').addEventListener('submit', event => {
+  
+    //Add input function for search then:
+    var searchTitle = document.getElementById('search').value;
+
     event.preventDefault();
     fetchStreamingInfo();
  });
-
    
 // JOSHUA FUNCTION
 
@@ -197,9 +198,6 @@ function fetchStreamingInfo() {
 		    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
 	    }
     };
-
-    //Add input function for search then:
-    const searchTitle = document.getElementById('search').value;
 
     //Fetch request 
     fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=' + searchTitle + '&country=us&show_type=movie&output_language=en', options)
