@@ -22,6 +22,8 @@ var trendingBtn = document.getElementById('trending-button');
 var cardContainer = document.getElementById('card-container');
 var watchlistEl = document.getElementById('watchlist');
 
+//Set variable for search term
+var searchTitle = '';
 
 // Title case function for search
 function titleCase(str) {
@@ -168,19 +170,15 @@ watchlistEl.addEventListener("click", function(e) {
 })
 
 displayWatchlist();
-// call the display trending function on initial page load
-displayTrending();
-
 
 
 
 // TO DO TODAY  EVENT LISTENER TO FIRE  function fetchStreamingInfo()
 
- document.querySelector('#search').addEventListener('submit', event => {
-  
-    //Add input function for search then:
-    var searchTitle = document.getElementById('search').value;
+ document.querySelector('#searchForm').addEventListener('submit', event => {
 
+    searchTitle = document.getElementById('search').value;
+    
     event.preventDefault();
     fetchStreamingInfo();
  });
@@ -220,4 +218,5 @@ function fetchStreamingInfo() {
     let directors = result[0].directors;
     let cast = result[0].cast;
 
+    console.log(movieTitle);
 }
