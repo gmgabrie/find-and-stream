@@ -12,7 +12,9 @@
   h1 {
     color: white;
   }
-
+h5{
+  color: #f3f3f3;
+}
   #trending-card {
     width: 440px;
     /* display:flex;
@@ -53,24 +55,26 @@
   .trendingMovieInfo{
     padding: 5px;
     color: #212121;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(83, 83, 83, 0.2);
     position: absolute;
     bottom: 0;
     left: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     /* box-shadow: 10px 0 0 0 rgb(255, 255, 255,); */
   }
   .trendingMovieInfo p{
     visibility: hidden;
-    opacity: 0.5;
+    opacity: 15;
     max-height: 0;
     overflow-y: auto;
-    transition: 1s;
+    transition: 2s;
+    color: #f3f3f3;
+    text-shadow: #212121 3px 3px 3px;
   }
 
   .card:hover .trendingMovieInfo p{
     visibility: visible;
-    opacity: 1;
+    opacity: 15;
     height: auto;
     max-height: 360px;
   }
@@ -91,6 +95,12 @@
   .darkMode .watchlistItem{
     background-color: #4f4f4f;
     border-color: #212121;
+  }
+  .darkMode h4{
+    color: black;
+  }
+  .darkMode .modal-content{
+    color: black;
   }
 
   .darkMode .watchlistItem a {
