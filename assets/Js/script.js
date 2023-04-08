@@ -3,17 +3,22 @@
 //     M.updateTextFields();
 //   });
 
-
 //GLOBAL VARIABLES
+let XRapidAPI_Key = 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738';
+let XRapidAPI_Host ='streaming-availability.p.rapidapi.com';
+var trendingApiUrl = 'https://api.themoviedb.org/3/trending/movie/week?api_key=';
+var trendingApiKey = '768690ea624c6d0cff681d2edcb833a2';
+var trendingPosterUrl = 'https://www.themoviedb.org/t/p/w220_and_h330_face';
 
-let XRapidAPI_Key = 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738'
-let XRapidAPI_Host ='streaming-availability.p.rapidapi.com'
-var trendingApiUrl = 'https://api.themoviedb.org/3/trending/movie/week?api_key='
-var trendingApiKey = '768690ea624c6d0cff681d2edcb833a2'
-var trendingPosterUrl = 'https://www.themoviedb.org/t/p/w220_and_h330_face'
-
-// variable for main card container section
-var cardContainer = document.getElementById('card-container');
+//Global data variables for search
+var movieTitle = '';
+var releaseYear = '';
+var posterImg = '';
+var overview = '';
+var streamingOptions = '';
+var trendingCard ='';
+var cardImageDiv = '';
+var trendingMovieInfo = '';
 
 // variable for button to view trending movies
 var trendingBtn = document.getElementById('trending-button');
@@ -25,17 +30,18 @@ var watchlistEl = document.getElementById('watchlist');
 //Set variable for search term
 var searchTitle = '';
 
-// Title case function for search
-function titleCase(str) {
-  var splitStr = str.toLowerCase().split(' ');
-  for (var i = 0; i < splitStr.length; i++) {
+//TODO - Commented out lower section - don't need?
+// // Title case function for search
+// function titleCase(str) {
+//   var splitStr = str.toLowerCase().split(' ');
+//   for (var i = 0; i < splitStr.length; i++) {
       
-      // Assign it back to the array
-      splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-  }
-  // Directly return the joined string
-  return splitStr.join(' ');
-}
+//       // Assign it back to the array
+//       splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+//   }
+//   // Directly return the joined string
+//   return splitStr.join(' ');
+// }
 
 // function to call Trending API and create elements with dynamic data based on results
 function displayTrending() {
@@ -66,18 +72,17 @@ function displayTrending() {
     console.log(trendingTitle, trendingPoster, trendingOverview, trendingDate);
   
     // create dynamic card elements to display data for each movie
-    var trendingCard = document.createElement('div');
+    trendingCard = document.createElement('div');
     trendingCard.id = 'trending-card';
     trendingCard.classList.add('card');
   
     cardContainer.appendChild(trendingCard);
   
   //create separate div for movie poster image and red button
-    var cardImageDiv = document.createElement('div');
+    cardImageDiv = document.createElement('div');
     cardImageDiv.classList.add('card-image');
     cardImageDiv.id = 'card-image-div';
     trendingCard.appendChild(cardImageDiv);
-  
   
     var displayTrendingPoster = document.createElement('img');
     displayTrendingPoster.src = trendingPosterUrl + trendingPoster;
@@ -92,7 +97,7 @@ function displayTrending() {
     cardImageDiv.appendChild(redButtonA);
   
   //created seperate div for movie info
-    var trendingMovieInfo = document.createElement('div');
+    trendingMovieInfo = document.createElement('div');
     trendingCard.appendChild(trendingMovieInfo);
   
     var displayTrendingTitle = document.createElement('h5');
@@ -165,59 +170,120 @@ watchlistEl.addEventListener("click", function(e) {
     displayWatchlist();
   } else if (e.target.nodeName === 'A') {
     document.getElementById('search').value = e.target.textContent;
-    fetchStreamingInfo();
+    getStreamingInfo();
   }
 })
 
 displayWatchlist();
-
-
-
-// TO DO TODAY  EVENT LISTENER TO FIRE  function fetchStreamingInfo()
 
  document.querySelector('#searchForm').addEventListener('submit', event => {
 
     searchTitle = document.getElementById('search').value;
     
     event.preventDefault();
-    fetchStreamingInfo();
+    getSearchedMovie();
  });
    
-// JOSHUA FUNCTION
 
 //Get data from API based on title search
-function fetchStreamingInfo() {
+function getSearchedMovie() {
+
+  
+  //Clear trending movie data in cards
+  cardContainer.replaceChildren('');
+  trendingCard.replaceChildren('');
+  cardImageDiv.replaceChildren('');
+  trendingCard.replaceChildren('');
+  trendingMovieInfo.replaceChildren('');
    
-    //API access info
-    const options = {
-	    method: 'GET',
-	    headers: {
-		    'X-RapidAPI-Key': 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738',
-		    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-	    }
-    };
+  //API access info
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738',
+      'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+    }
+  };
 
-    //Fetch request 
-    fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=' + searchTitle + '&country=us&show_type=movie&output_language=en', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+  //Fetch request 
+  fetch('https://streaming-availability.p.rapidapi.com/v2/search/title?title=' + searchTitle + '&country=us&show_type=movie&output_language=en', options)
+	.then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
 
-    //Set variables to access data ([0] shows data for first movie that comes up in search -> "john wick 4 has 20 results") 
-    //Will need to run loop to get each movie and display each card with appropriate data
-    let movieTitle = result[0].title;
-    let tagline = result[0].tagline;
-    let releaseYear = result[0].year;
-    let posterImg = result[0].posterURLs[154];
-    let minAge = result[0].advisedMinimumAudienceAge;
-    let genre = result[0].genres[0].name; //Multiple genres? (result[0].genres[1].name) - create array of genres when multiples
-    let imdbRating = result[0].imdbRating;
-    let overview = result[0].overview;
-    let runtimeMin = result[0].runtime; //Gives movie length in minutes - can convert to HH:MM
-    let trailer = result[0].youtubeTrailerVideoLink;
-    let directors = result[0].directors;
-    let cast = result[0].cast;
+    //Loop through results and display data in cards
+    for (var i=0; i < 10; i++) {
+  
+    movieTitle = data.result[i].title;
+    releaseYear = data.result[i].year;
+    posterImg = data.result[i].posterURLs[154];
+    overview = data.result[i].overview;
+    var streamingOptions = data.result[i].streamingInfo.us;
+    if (streamingOptions === undefined) {
+      continue;
+    }
+    var streamingKeys = Object.keys(streamingOptions);
+    
+    // create dynamic card elements to display data for each movie
+    var trendingCard = document.createElement('div');
+    trendingCard.id = 'trending-card';
+    trendingCard.classList.add('card');
+    cardContainer.appendChild(trendingCard);
+  
+  //create separate div for movie poster image and red button
+    var cardImageDiv = document.createElement('div');
+    cardImageDiv.classList.add('card-image');
+    cardImageDiv.id = 'card-image-div';
+    trendingCard.appendChild(cardImageDiv);
+  
+    var displayMoviePoster = document.createElement('img');
+    displayMoviePoster.src = posterImg;
+    displayMoviePoster.id = 'trending-poster';
+    cardImageDiv.appendChild(displayMoviePoster);
+  
+    // add the red circle with plus sign on each card
+    var redButtonA = document.createElement('a');
+    var redButtonClasses = ['btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red'];
+    redButtonA.classList.add(...redButtonClasses);
+    redButtonA.innerHTML = '<i class="material-icons">add</i>';
+    cardImageDiv.appendChild(redButtonA);
+  
+  //created seperate div for movie info
+    var movieInfo = document.createElement('div');
+    trendingCard.appendChild(movieInfo);
+  
+    var displayMovieTitle = document.createElement('h5');
+    displayMovieTitle.textContent = movieTitle;
+    movieInfo.appendChild(displayMovieTitle);
+  
+    var displayMovieDate = document.createElement('p');
+    displayMovieDate.textContent = 'Release Date: ' + releaseYear;
+    movieInfo.appendChild(displayMovieDate);
+  
+    var displayMovieOverview = document.createElement('p');
+    //Limit overview length
+    function limit (string = '', limit = 0) {
+      return string.substring(0, limit);
+    }
+    displayMovieOverview.textContent = limit(overview, 140);
+    movieInfo.appendChild(displayMovieOverview);
 
+    var streamingListHeader = document.createElement('h5');
+    streamingListHeader.innerHTML = 'Streaming Options:';
+    movieInfo.appendChild(streamingListHeader);
+    var displayStreamingInfo = document.createElement('ul');
+    movieInfo.appendChild(displayStreamingInfo);
+
+    //Organize streaming options into a list (max 5 options)
+    for (a = 0; a < streamingKeys.length; a++) {
+      var listItem = document.createElement('li');
+      listItem.innerText = streamingKeys[a];
+      displayStreamingInfo.appendChild(listItem)
+      }
+    }
+  })
 }
 
 // needed for materialize modal
