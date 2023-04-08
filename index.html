@@ -10,12 +10,7 @@
 			rel="stylesheet"
 		/>
 		<!--Import materialize.css-->
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="css/materialize.min.css"
-			media="screen,projection"
-		/>
+
 		<!-- Compiled and minified CSS -->
 		<link
 			rel="stylesheet"
@@ -26,10 +21,11 @@
 
 		<title>Find and Stream</title>
 	</head>
-	<body>
+	<body class="darkMode">
+		<button id ="lightDarkModeToggle" class="lightDarkModeToggle">Dark Mode</button>
 		<!-- Navbar -->
 		<header class="teal">
-			<div class="row teal">
+			<div class="header-row row teal">
 				<h1 class="col l12 center">Find and Stream</h1>
 			</div>
 		</header>
@@ -38,9 +34,10 @@
 			<div class="nav-wrapper container">
 				<form id="searchForm">
 					<div class="input-field">
-						<input id="search" type="search" required />
+						<input id="search" type="search" placeholder="Search Movies" required />
 						<label class="label-icon" for="search">
-							<button type="submit" id="searchBtn"><i class="material-icons">search</i></button>
+							<i class="material-icons">search</i>
+							<!-- <button type="submit" id="searchBtn"><i class="material-icons">search</i></button> -->
 							</label>
 			</div>
 		</nav>
