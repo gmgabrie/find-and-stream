@@ -12,22 +12,13 @@ var trendingPosterUrl = 'https://www.themoviedb.org/t/p/w220_and_h330_face';
 
 //Global data variables for search
 var movieTitle = '';
-var tagline = '';
 var releaseYear = '';
 var posterImg = '';
-var minAge = '';
-var genre = [];
-var imdbRating = '';
 var overview = '';
-var runtimeMin = '';
-var trailer = '';
-var directors = '';
-var cast = '';
 var streamingOptions = '';
 var trendingCard ='';
 var cardImageDiv = '';
 var trendingMovieInfo = '';
-var streamingListItems = '';
 
 // variable for button to view trending movies
 var trendingBtn = document.getElementById('trending-button');
@@ -223,34 +214,18 @@ function getSearchedMovie() {
     console.log(data);
 
     //Loop through results and display data in cards
-    for (var i=0; i < 20; i++) {
+    for (var i=0; i < 10; i++) {
   
     movieTitle = data.result[i].title;
-    tagline = data.result[i].tagline;
     releaseYear = data.result[i].year;
     posterImg = data.result[i].posterURLs[154];
-    minAge = data.result[i].advisedMinimumAudienceAge;
-    genre = data.result[i].genres[0].name; //Multiple genres? (result[0].genres[1].name) - create array of genres when multiples
-    imdbRating = data.result[i].imdbRating;
     overview = data.result[i].overview;
-    runtimeMin = data.result[i].runtime; //Gives movie length in minutes - can convert to HH:MM
-    trailer = data.result[i].youtubeTrailerVideoLink;
-    directors = data.result[i].directors;
-    cast = data.result[i].cast;
     var streamingOptions = data.result[i].streamingInfo.us;
     if (streamingOptions === undefined) {
       continue;
     }
     var streamingKeys = Object.keys(streamingOptions);
-console.log(streamingKeys.length);
-    //Organize streaming options into a list
-    function streamingList() {
-      for (i = 0; i < streamingKeys.length; i++) {
-        streamingListItems.innerHTML = '<li>' +  + '</li>'
-      }
-    }
     
-
     // create dynamic card elements to display data for each movie
     var trendingCard = document.createElement('div');
     trendingCard.id = 'trending-card';
@@ -295,10 +270,18 @@ console.log(streamingKeys.length);
     displayMovieOverview.textContent = limit(overview, 140);
     movieInfo.appendChild(displayMovieOverview);
 
+    var streamingListHeader = document.createElement('h5');
+    streamingListHeader.innerHTML = 'Streaming Options:';
+    movieInfo.appendChild(streamingListHeader);
     var displayStreamingInfo = document.createElement('ul');
-    displayStreamingInfo.innerHTML = '<h5>Streaming Options: </h5><p>' + streamingKeys + '</p>';
     movieInfo.appendChild(displayStreamingInfo);
-    movieInfo.appendChild(streamingListItems);
+
+    //Organize streaming options into a list (max 5 options)
+    for (a = 0; a < streamingKeys.length; a++) {
+      var listItem = document.createElement('li');
+      listItem.innerText = streamingKeys[a];
+      displayStreamingInfo.appendChild(listItem)
+      }
     }
   })
 }
