@@ -167,7 +167,7 @@ function displayWatchlist() {
 }
 
 watchlistEl.addEventListener("click", function(e) {
-  console.log(e.target.nodeName);
+  //console.log(e.target.nodeName);
   if (e.target.nodeName === 'BUTTON') {
     var movieTitle = e.target.previousSibling.textContent;
     console.log(movieTitle);
@@ -226,7 +226,7 @@ function getSearchedMovie() {
   
     movieTitle = data.result[i].title;
     releaseYear = data.result[i].year;
-    posterImg = data.result[i].posterURLs[154];
+    posterImg = data.result[i].posterURLs[185];
     overview = data.result[i].overview;
     var streamingOptions = data.result[i].streamingInfo.us;
     if (streamingOptions === undefined) {
@@ -235,7 +235,7 @@ function getSearchedMovie() {
     var streamingKeys = Object.keys(streamingOptions);
     
     // create dynamic card elements to display data for each movie
-    var trendingCard = document.createElement('div');
+    trendingCard = document.createElement('div');
     trendingCard.id = 'trending-card';
     trendingCard.classList.add('card');
     cardContainer.appendChild(trendingCard);
@@ -253,13 +253,17 @@ function getSearchedMovie() {
   
     // add the red circle with plus sign on each card
     var redButtonA = document.createElement('a');
-    var redButtonClasses = ['btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red'];
+    var redButtonClasses = ['btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red', 'watchlistAddBtn'];
     redButtonA.classList.add(...redButtonClasses);
     redButtonA.innerHTML = '<i class="material-icons">add</i>';
-    cardImageDiv.appendChild(redButtonA);
+       trendingCard.appendChild(redButtonA);
+       $(".watchlistAddBtn").off("click").on("click", function (){
+        watchlistAdd(this)
+       })
   
   //created seperate div for movie info
     var movieInfo = document.createElement('div');
+    movieInfo.classList.add("trendingMovieInfo")
     trendingCard.appendChild(movieInfo);
   
     var displayMovieTitle = document.createElement('h5');
@@ -278,17 +282,17 @@ function getSearchedMovie() {
     displayMovieOverview.textContent = limit(overview, 140);
     movieInfo.appendChild(displayMovieOverview);
 
-    var streamingListHeader = document.createElement('h5');
+    var streamingListHeader = document.createElement('p');
     streamingListHeader.innerHTML = 'Streaming Options:';
     movieInfo.appendChild(streamingListHeader);
-    var displayStreamingInfo = document.createElement('ul');
-    movieInfo.appendChild(displayStreamingInfo);
 
+    var displayStreamingInfo = document.createElement('ul');
     //Organize streaming options into a list (max 5 options)
     for (a = 0; a < streamingKeys.length; a++) {
       var listItem = document.createElement('li');
       listItem.innerText = streamingKeys[a];
-      displayStreamingInfo.appendChild(listItem)
+      displayStreamingInfo.appendChild(listItem);
+      movieInfo.appendChild(displayStreamingInfo);
       }
     }
   })
