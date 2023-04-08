@@ -30,18 +30,6 @@ var watchlistEl = document.getElementById('watchlist');
 //Set variable for search term
 var searchTitle = '';
 
-//TODO - Commented out lower section - don't need?
-// // Title case function for search
-// function titleCase(str) {
-//   var splitStr = str.toLowerCase().split(' ');
-//   for (var i = 0; i < splitStr.length; i++) {
-      
-//       // Assign it back to the array
-//       splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-//   }
-//   // Directly return the joined string
-//   return splitStr.join(' ');
-// }
 
 // function to call Trending API and create elements with dynamic data based on results
 function displayTrending() {
