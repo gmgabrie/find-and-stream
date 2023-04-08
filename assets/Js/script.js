@@ -30,6 +30,7 @@ var watchlistEl = document.getElementById('watchlist');
 //Set variable for search term
 var searchTitle = '';
 
+
 // function to call Trending API and create elements with dynamic data based on results
 function displayTrending() {
     fetch(trendingApiUrl + trendingApiKey)
