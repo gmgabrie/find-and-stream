@@ -1,97 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Import Google Icon Font -->
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<!--Import materialize.css-->
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="css/materialize.min.css"
-			media="screen,projection"
-		/>
-		<!-- Compiled and minified CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-		/>
-
-		<link rel="stylesheet" href="./assets/css/style.css" />
-
-		<title>Find and Stream</title>
-	</head>
-	<body>
-		<!-- Navbar -->
-		<header class="teal">
-			<div class="row teal">
-				<h1 class="col l12 center">Find and Stream</h1>
-				<span class="logo firstName">Enjoy a good</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Import Google Icon Font -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <!--Import materialize.css-->
+        <!-- Compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Find and Stream</title>
+    </head>
+    <body class="darkMode">
+        <button id ="lightDarkModeToggle" class="lightDarkModeToggle">Dark Mode</button>
+        <!-- Navbar -->
+        <header class="teal">
+            <div class="header-row row teal">
+                <h1 class="col l12 center">Find and Stream</h1>
+                <span class="logo firstName">Enjoy a good</span>
 			<span class="logo lastName">Movie with our app</span>
-
-
-			</div>
-		</header>
-
-		<nav class="teal">
-			<div class="nav-wrapper container">
-				<form id="searchForm">
-					<div class="input-field">
-						<input id="search" type="search" required />
-						<label class="label-icon" for="search">
-							<button type="submit" id="searchBtn"><i class="material-icons">search</i></button>
-							</label>
-			</div>
-		</nav>
-
-			<div class="row">
-			<div class="col l3">
-				<br>
-				<!-- Modal Trigger -->
-				<button data-target="modal1" class="btn blue darken-3 modal-trigger">Need Help?</button>
-				<!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
-											
-				<!-- Modal Structure -->
-				<div id="modal1" class="modal">
-					<div class="modal-content">
-						<h4>Find and Stream Help</h4>
-							<p>Search for a movie title in the top search bar.  Results will show movie information as well as streaming options.
-							<br><br>Click on the red button to add a title to your Watch List.
-							<br><br>View top trending movies by clicking on the "View Top Trending Movies" button.
-							</p>
-					</div>
-					<div class="modal-footer">
-						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-					</div>
-				</div>
-				<br>
-				<br>
-				<a id="trending-button" class="waves-effect waves-light btn">View Top Trending Movies</a>
-				<h2>Watchlist</h2>
-				<hr />
-				<br />
-				<div class="collection" id="watchlist">
-				</div>
-			</div>
-
-			<!-- Card Section-->
-			<div id="card-container" class="row">
-			</div>
-		</div>
-
-		<!-- Footer -->
-
-		<!--JavaScript at end of body for optimized loading-->
-		<!-- need jQuery for modal -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-		<!-- need Materialize CDN link -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="./assets/Js/script.js"></script>
-	</body>
+            </div>
+        </header>
+        <nav class="teal">
+            <div class="nav-wrapper container">
+                <form id="searchForm">
+                    <div class="input-field">
+                        <input id="search" type="search" placeholder="Search Movies" required />
+                        <label class="label-icon" for="search">
+                            <!-- <i class="material-icons">search</i> -->
+                            <button type="submit" id="searchBtn"><i class="material-icons">search</i></button>
+                            </label>
+                    </div>
+                </form>
+            </div>
+        </nav>
+            <div class="row">
+            <div class="col l3">
+                <br>
+                <!-- Modal Trigger -->
+                <button data-target="modal1" class="btn blue darken-3 modal-trigger">Need Help?</button>
+                <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Find and Stream Help</h4>
+                            <p>Search for a movie title in the top search bar.  Results will show movie information as well as streaming options.
+                            <br><br>Click on the red button to add a title to your Watch List.
+                            <br><br>View top trending movies by clicking on the "View Top Trending Movies" button.
+                            </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <a id="trending-button" class="waves-effect waves-light btn">View Top Trending Movies</a>
+                <h2>Watchlist</h2>
+                <hr />
+                <br />
+                <div class="collection" id="watchlist">
+                </div>
+            </div>
+            <!-- Card Section-->
+            <div id="card-container" class="row">
+            </div>
+        </div>
+        <!-- Footer -->
+        <!--JavaScript at end of body for optimized loading-->
+        <!-- need jQuery for modal -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- need Materialize CDN link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./assets/Js/script.js"></script>
+    </body>
 </html>
-
