@@ -16,11 +16,11 @@ h5{
   color: #f3f3f3;
 }
   #trending-card {
-    width: 440px;
+    /*width: 440px;
     /* display:flex;
-    flex-wrap: wrap; */
-    margin: 10px 10px 40px 10px;
-   min-height: 660px;
+    flex-wrap: wrap;*/
+   margin: 10px 10px 40px 10px;
+   /*min-height: 660px;*/
    background-repeat: no-repeat;
    background-position: 0px 0px;
    background-size: cover;
@@ -71,6 +71,15 @@ h5{
     color: #f3f3f3;
     text-shadow: #212121 3px 3px 3px;
   }
+  .trendingMovieInfo ul{
+    visibility: hidden;
+    opacity: 15;
+    max-height: 0;
+    overflow-y: auto;
+    transition: 2s;
+    color: #f3f3f3;
+    text-shadow: #212121 3px 3px 3px;
+  }
 
   .card:hover .trendingMovieInfo p{
     visibility: visible;
@@ -78,6 +87,13 @@ h5{
     height: auto;
     max-height: 360px;
   }
+  .card:hover .trendingMovieInfo ul{
+    visibility: visible;
+    opacity: 15;
+    height: auto;
+    max-height: 360px;
+  }
+
   .lightDarkModeToggle{
     position: absolute;
     right: 10px;
