@@ -23,6 +23,7 @@ h5{
     flex-wrap: wrap;*/
    margin: 10px 10px 40px 10px;
    /*min-height: 660px;*/
+
    background-repeat: no-repeat;
    background-position: 0px 0px;
    background-size: cover;
@@ -109,6 +110,7 @@ h5{
     /* color: darkblue; */
   }
 
+
   
   /* COOL ANIMATIONS  */
 
@@ -182,3 +184,4 @@ h5{
     0% { opacity: 0; margin-left: -250px; }
     100% { opacity: 1; margin-left: 0; }
   }
+
