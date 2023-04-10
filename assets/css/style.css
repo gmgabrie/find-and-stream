@@ -18,11 +18,11 @@ h5{
   color: #f3f3f3;
 }
   #trending-card {
-    /*width: 440px;
-    /* display:flex;
-    flex-wrap: wrap; */
+    width: 440px;
+    display:flex;
+    flex-wrap: wrap;
    margin: 10px 10px 40px 10px;
-   /*min-height: 660px;*/
+   min-height: 660px;
 
    background-repeat: no-repeat;
    background-position: 0px 0px;
@@ -71,7 +71,7 @@ h5{
     position: absolute;
     bottom: 0;
     left: 0;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     /* box-shadow: 10px 0 0 0 rgb(255, 255, 255,); */
   }
   .trendingMovieInfo p{
@@ -105,6 +105,14 @@ h5{
     height: auto;
     max-height: 360px;
   }
+
+  .card .card-image img {
+    display: flex;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    bottom: 0;
+    width: 440px;
+}
 
   .lightDarkModeToggle{
     position: absolute;
