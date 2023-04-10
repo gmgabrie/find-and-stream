@@ -41,6 +41,11 @@ h5{
     max-height: 330px;
   }
 
+
+  #searchBtn {
+    height: 63px;
+  }
+
   .header-row{
       margin-left: auto;
       margin-right: auto;
