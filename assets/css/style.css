@@ -1,0 +1,212 @@
+  /* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+  } */
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+  h1 {
+    color: white;
+  }
+
+h5{
+  max-height: 10px;
+  color: #f3f3f3;
+}
+  #trending-card {
+    /*width: 440px;
+    /* display:flex;
+    flex-wrap: wrap; */
+   margin: 10px 10px 40px 10px;
+   /*min-height: 660px;*/
+
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-size: cover;
+
+  }
+
+  #card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+  #card-image-div {
+    max-height: 330px;
+  }
+
+
+  #searchBtn {
+    height: 63px;
+  }
+
+  .header-row{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px !important;
+  
+  }
+  .watchlistX{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  /* hide trending button by default */
+  #trending-button {
+    visibility: hidden;
+  }
+
+  .trendingMovieInfo{
+    padding: 5px;
+    color: #212121;
+    background-color: rgba(83, 83, 83, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    /* box-shadow: 10px 0 0 0 rgb(255, 255, 255,); */
+  }
+  .trendingMovieInfo p{
+    visibility: hidden;
+    opacity: 15;
+    max-height: 0;
+    overflow-y: auto;
+    transition: 2s;
+    color: #f3f3f3;
+    text-shadow: #212121 3px 3px 3px;
+  }
+  .trendingMovieInfo ul{
+    visibility: hidden;
+    opacity: 15;
+    max-height: 0;
+    overflow-y: auto;
+    transition: 2s;
+    color: #f3f3f3;
+    text-shadow: #212121 3px 3px 3px;
+  }
+
+  .card:hover .trendingMovieInfo p{
+    visibility: visible;
+    opacity: 15;
+    height: auto;
+    max-height: 360px;
+  }
+  .card:hover .trendingMovieInfo ul{
+    visibility: visible;
+    opacity: 15;
+    height: auto;
+    max-height: 360px;
+  }
+
+  .lightDarkModeToggle{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .lightMode{
+    background-color: #f3f3f3;
+    color: #212121;
+
+  }
+  .darkMode{
+    background-color: #212121;
+    color: #f3f3f3;
+  }
+  .darkMode .watchlistItem{
+    background-color: #4f4f4f;
+    border-color: #212121;
+  }
+  .darkMode h4{
+    color: black;
+  }
+  .darkMode .modal-content{
+    color: black;
+  }
+
+  .darkMode .watchlistItem a {
+    /* color: darkblue; */
+  }
+
+
+  
+  /* COOL ANIMATIONS  */
+
+
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    
+    background-color: transparent;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    padding: 0 0.3em;
+    display: flex;
+    float: left;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .firstName {
+    background-color: transparent;
+    color:black;
+    font-style: italic;
+  }
+  
+  .lastName {
+    background-color: transparent;
+    color: black;
+    font-style: italic;
+  }
+  
+  
+  /* Set vendor-specific animation name and duration on .logo class */
+  
+  .logo {
+    -webkit-animation-name: fadein;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: fadein;
+    -moz-animation-duration: 3s;
+    -ms-animation-name: fadein;
+    -ms-animation-duration: 3s;
+    -o-animation-name: fadein;
+    -o-animation-duration: 3s;
+    animation-name: fadein;
+    animation-duration: 3s;
+  }
+  
+  /* Set vendor-specific keyframes for animation on load 
+     Position and opacity are animated */
+  
+  @-webkit-keyframes fadein {
+    0% { opacity: 0; margin-left: -250px; }
+    100% { opacity: 1; margin-left: 0; }
+  }
+  
+  @-moz-keyframes fadein {
+    0% { opacity: 0; margin-left: -250px; }
+    100% { opacity: 1; margin-left: 0; }
+  }
+  
+  @-ms-keyframes fadein {
+    0% { opacity: 0; margin-left: -250px; }
+    100% { opacity: 1; margin-left: 0; }
+  }
+  
+  @-o-keyframes fadein {
+    0% { opacity: 0; margin-left: -250px; }
+    100% { opacity: 1; margin-left: 0; }
+  }
+  
+  @keyframes fadein {
+    0% { opacity: 0; margin-left: -250px; }
+    100% { opacity: 1; margin-left: 0; }
+  }
+
