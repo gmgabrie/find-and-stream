@@ -33,6 +33,11 @@ var searchTitle = '';
 
 // function to call Trending API and create elements with dynamic data based on results
 function displayTrending() {
+
+  //hide trending button when showing trending cards
+  trendingBtn.style.visibility = 'hidden';
+
+
     fetch(trendingApiUrl + trendingApiKey)
     .then(function(response) {
       return response.json();
@@ -196,7 +201,9 @@ displayWatchlist();
 //Get data from API based on title search
 function getSearchedMovie() {
 
-  
+  // show trending button
+  trendingBtn.style.visibility = 'visible';
+
   //Clear trending movie data in cards
   cardContainer.replaceChildren('');
   trendingCard.replaceChildren('');
