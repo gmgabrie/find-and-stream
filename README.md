@@ -61,8 +61,6 @@ Then the available corresponding movies are displayed
 ![Screenshot 7](https://user-images.githubusercontent.com/120201085/230934416-b646fe53-3720-40c6-a986-b632df6db802.png)
 
 
-
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 7.png
 ## Credits
 
 This application was built with the participation of 5 members as a team:
