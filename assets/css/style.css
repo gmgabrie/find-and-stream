@@ -20,7 +20,7 @@ h5{
   #trending-card {
     /*width: 440px;
     /* display:flex;
-    flex-wrap: wrap;*/
+    flex-wrap: wrap; */
    margin: 10px 10px 40px 10px;
    /*min-height: 660px;*/
 
@@ -41,6 +41,11 @@ h5{
     max-height: 330px;
   }
 
+
+  #searchBtn {
+    height: 63px;
+  }
+
   .header-row{
       margin-left: auto;
       margin-right: auto;
@@ -52,9 +57,13 @@ h5{
     width: 20px;
     height: 20px;
     line-height: 20px;
-  
-
   }
+  
+  /* hide trending button by default */
+  #trending-button {
+    visibility: hidden;
+  }
+
   .trendingMovieInfo{
     padding: 5px;
     color: #212121;
