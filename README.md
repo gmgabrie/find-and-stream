@@ -29,41 +29,36 @@ Please Click on the link below to open the "Find and Stream":
  
 ## Usage
 
-
 Our application landing page with the light mode:
 
 
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 1.png
 
--screenshot will be there
 
 Our application landing page with the dark mode:
 
--screenshot will be there
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 2.png
 
 When the user  select a movie  by clicking on the red button, then  the movie title is set in the  watchlist
 
--screenshot will be there
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 3.png
 
 When the user  hover a movie card then the movie details appears
 
---screenshot will be there
+
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 4.png
 
 When the user click on a movie title in the watchlist then that movie name is put in the main search area
 
--screenshot will be there
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 5.png
 
 When the user type a movie name in the main search area
 
--
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 6.png
 
 Then the available corresponding movies are displayed
 
---screenshot will be there
-
-
-
-
-
+UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 7.png
 ## Credits
 
 This application was built with the participation of 5 members as a team:
