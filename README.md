@@ -31,32 +31,36 @@ Please Click on the link below to open the "Find and Stream":
 
 Our application landing page with the light mode:
 
-
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 1.png
-
+![Screenshot 1](https://user-images.githubusercontent.com/120201085/230934376-5ed258d6-1bd2-4d29-9436-e7ced1668dc4.png)
 
 Our application landing page with the dark mode:
 
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 2.png
+![Screenshot 2](https://user-images.githubusercontent.com/120201085/230934392-0f315c56-2ff2-4531-873f-776e5be1a968.png)
 
 When the user  select a movie  by clicking on the red button, then  the movie title is set in the  watchlist
 
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 3.png
+![Screenshot 3](https://user-images.githubusercontent.com/120201085/230934401-0b21fc95-81cc-4dd9-b6c8-2ce1cabdfe85.png)
+
 
 When the user  hover a movie card then the movie details appears
 
+![Screenshot 4](https://user-images.githubusercontent.com/120201085/230934406-a5bd94af-3ab1-4b99-b268-b9a442e332b7.png)
 
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 4.png
 
 When the user click on a movie title in the watchlist then that movie name is put in the main search area
 
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 5.png
+![Screenshot 5](https://user-images.githubusercontent.com/120201085/230934411-429642ba-6339-4dcc-9573-d3339a37d272.png)
+
 
 When the user type a movie name in the main search area
 
-UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 6.png
+![Screenshot 6](https://user-images.githubusercontent.com/120201085/230934414-6efed2bc-d129-4aae-9667-1be2954c4353.png)
 
 Then the available corresponding movies are displayed
+
+![Screenshot 7](https://user-images.githubusercontent.com/120201085/230934416-b646fe53-3720-40c6-a986-b632df6db802.png)
+
+
 
 UCF-BOOTCAMP2\group1-project1\assets\images\Screenshot 7.png
 ## Credits
