@@ -4,7 +4,8 @@
 //   });
 
 //GLOBAL VARIABLES
-let XRapidAPI_Key = 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738';
+// let XRapidAPI_Key = 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738';
+let XRapidAPI_Key = 'b10fc93f27mshca14c7c429f63c7p147b38jsn03bc3f95bb90';
 let XRapidAPI_Host ='streaming-availability.p.rapidapi.com';
 var trendingApiUrl = 'https://api.themoviedb.org/3/trending/movie/week?api_key=';
 var trendingApiKey = '768690ea624c6d0cff681d2edcb833a2';
@@ -215,7 +216,8 @@ function getSearchedMovie() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738',
+      // 'X-RapidAPI-Key': 'f9dd7506d0msh3120d98dd5267e1p1d3d4cjsneff3e02fa738',
+      'X-RapidAPI-Key': 'b10fc93f27mshca14c7c429f63c7p147b38jsn03bc3f95bb90',
       'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
     }
   };
